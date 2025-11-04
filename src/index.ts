@@ -27,12 +27,16 @@ function validateEnvironment(): void {
     'SLACK_BOT_TOKEN',
     'SLACK_SIGNING_SECRET',
     'SLACK_APP_TOKEN',
-    'OPENAI_API_KEY',
-    'DB_HOST',
-    'DB_NAME',
-    'DB_USER',
-    'DB_PASSWORD'
+    'OPENAI_API_KEY'
   ];
+
+  // Database configuration: either DATABASE_URL OR individual DB variables
+  const hasDatabaseUrl = !!process.env.DATABASE_URL;
+  const hasIndividualDbVars = !!(process.env.DB_HOST && process.env.DB_NAME && process.env.DB_USER && process.env.DB_PASSWORD);
+  
+  if (!hasDatabaseUrl && !hasIndividualDbVars) {
+    throw new Error('Missing database configuration: either DATABASE_URL or all of DB_HOST, DB_NAME, DB_USER, DB_PASSWORD must be set');
+  }
 
   const missing = required.filter(key => !process.env[key]);
   
