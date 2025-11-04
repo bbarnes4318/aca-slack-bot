@@ -608,11 +608,33 @@ I'll let the team know about this.`;
     
     // Send startup notification to management
     if (process.env.MANAGEMENT_CHANNEL_ID) {
-      await this.app.client.chat.postMessage({
-        token: process.env.SLACK_BOT_TOKEN!,
-        channel: process.env.MANAGEMENT_CHANNEL_ID,
-        text: `✅ ACA Support System started successfully at ${Helpers.formatTimestamp(new Date())}`
-      });
+      const managementChannel = process.env.MANAGEMENT_CHANNEL_ID;
+      try {
+        await this.app.client.chat.postMessage({
+          token: process.env.SLACK_BOT_TOKEN!,
+          channel: managementChannel,
+          text: `✅ ACA Support System started successfully at ${Helpers.formatTimestamp(new Date())}`
+        });
+      } catch (error: any) {
+        const errorCode = error?.data?.error || error?.code;
+        logger.warn('Startup notification failed', { errorCode });
+        // If not in channel, try to join (may require additional scopes) then retry once
+        if (errorCode === 'not_in_channel') {
+          try {
+            await this.app.client.conversations.join({
+              token: process.env.SLACK_BOT_TOKEN!,
+              channel: managementChannel
+            });
+            await this.app.client.chat.postMessage({
+              token: process.env.SLACK_BOT_TOKEN!,
+              channel: managementChannel,
+              text: `✅ ACA Support System started successfully at ${Helpers.formatTimestamp(new Date())}`
+            });
+          } catch (joinErr) {
+            logger.warn('Could not join or post to management channel. Invite the app to the channel or add chat:write.public scope.');
+          }
+        }
+      }
     }
   }
 
