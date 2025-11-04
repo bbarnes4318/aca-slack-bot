@@ -9,8 +9,7 @@ function createPoolConfig(): PoolConfig {
     return {
       connectionString: process.env.DATABASE_URL,
       ssl: {
-        rejectUnauthorized: false,
-        require: true
+        rejectUnauthorized: false
       },
       max: parseInt(process.env.DB_POOL_SIZE || '20'),
       idleTimeoutMillis: 30000,
