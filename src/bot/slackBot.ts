@@ -166,27 +166,35 @@ export class SlackBot {
     // Handle app mentions
     this.app.event('app_mention', async ({ event, say, client }) => {
       try {
+        const userId = event.user;
+        const channelId = event.channel;
+        
+        if (!userId || !channelId) {
+          logger.warn('App mention event missing required fields');
+          return;
+        }
+
         const cleanText = Helpers.removeMentions(event.text);
         
         // Get user info
-        const userInfo = await client.users.info({ user: event.user });
-        const userName = userInfo.user?.real_name || 'Agent';
+        const userInfo = await client.users.info({ user: userId });
+        const userName = userInfo.user?.real_name || userInfo.user?.name || 'Agent';
         
         const threadTs = 'thread_ts' in event ? event.thread_ts : undefined;
         
         // Create context
         const conversationId = await DatabaseQueries.getOrCreateConversation(
-          event.user,
+          userId,
           userName,
-          event.channel,
+          channelId,
           threadTs
         );
 
         const context: ConversationContext = {
           conversationId,
-          userId: event.user,
+          userId: userId,
           userName,
-          channelId: event.channel,
+          channelId: channelId,
           threadTs: threadTs,
           history: []
         };
