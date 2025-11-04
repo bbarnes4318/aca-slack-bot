@@ -23,7 +23,7 @@ function createPoolConfig(): PoolConfig {
       },
       max: parseInt(process.env.DB_POOL_SIZE || '20'),
       idleTimeoutMillis: 30000,
-      connectionTimeoutMillis: 10000
+      connectionTimeoutMillis: 30000
     };
     
     return config;
@@ -43,7 +43,7 @@ function createPoolConfig(): PoolConfig {
     password: String(password), // Ensure password is a string
     max: parseInt(process.env.DB_POOL_SIZE || '20'),
     idleTimeoutMillis: 30000,
-    connectionTimeoutMillis: 10000,
+    connectionTimeoutMillis: 30000,
     ssl: process.env.DB_SSL === 'true' ? { rejectUnauthorized: false } : false
   };
 }

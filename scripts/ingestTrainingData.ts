@@ -1,12 +1,14 @@
+import * as dotenv from 'dotenv';
+
+// Load environment variables FIRST before importing anything that uses them
+dotenv.config();
+
 import { OpenAIEmbeddings } from '@langchain/openai';
 import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
 import { DatabaseQueries } from '../src/database/queries';
 import { pool } from '../src/database/migrations/db';
 import * as fs from 'fs';
 import * as path from 'path';
-import * as dotenv from 'dotenv';
-
-dotenv.config();
 
 interface TrainingDocument {
   filename: string;
@@ -178,5 +180,6 @@ async function ingestTrainingData() {
 // Run the ingestion
 ingestTrainingData().catch(error => {
   console.error('Fatal error during ingestion:', error);
+  console.error('Stack:', error.stack);
   process.exit(1);
 });
