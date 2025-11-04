@@ -1,5 +1,7 @@
 import { Pool, Client, PoolConfig } from 'pg';
 import { logger } from '../../utils/logger';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 
 // SMART CONFIG: Checks for DATABASE_URL first (App Platform), 
 // falls back to individual vars (local development)
@@ -90,8 +92,10 @@ export async function initDatabase(): Promise<void> {
       }
     }
     
-    // Verify tables exist
+    // Verify tables exist, create if missing
     const tables = ['knowledge_base', 'conversations', 'messages', 'feedback'];
+    const missingTables: string[] = [];
+    
     for (const table of tables) {
       const result = await client.query(
         `SELECT EXISTS (
@@ -103,11 +107,27 @@ export async function initDatabase(): Promise<void> {
       );
       
       if (!result.rows[0].exists) {
-        throw new Error(`Table ${table} does not exist. Run npm run setup first.`);
+        missingTables.push(table);
       }
     }
     
-    logger.info('All database tables verified');
+    // Run migration if tables are missing
+    if (missingTables.length > 0) {
+      logger.info(`Missing tables detected: ${missingTables.join(', ')}. Running migration...`);
+      try {
+        const migrationSQL = readFileSync(
+          join(__dirname, '001_initial_setup.sql'),
+          'utf-8'
+        );
+        await client.query(migrationSQL);
+        logger.info('Database migration completed successfully');
+      } catch (migrationError: any) {
+        logger.error('Failed to run migration:', migrationError);
+        throw new Error(`Database tables are missing and migration failed: ${migrationError.message}`);
+      }
+    } else {
+      logger.info('All database tables verified');
+    }
   } finally {
     client.release();
   }
