@@ -7,6 +7,15 @@ import express from 'express';
 const healthApp = express();
 const PORT = process.env.PORT || 3000;
 
+healthApp.get('/', (req, res) => {
+  res.status(200).json({ 
+    service: 'ACA Slack Bot',
+    status: 'running',
+    message: 'This service operates within Slack. Visit /health for health checks.',
+    timestamp: new Date().toISOString()
+  });
+});
+
 healthApp.get('/health', (req, res) => {
   res.status(200).json({ 
     status: 'healthy',
