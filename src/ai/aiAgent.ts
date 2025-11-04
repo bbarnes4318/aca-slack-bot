@@ -58,7 +58,7 @@ export class AIAgent {
           { role: "user", content: query }
         ],
         temperature: 0.7,
-        max_tokens: 800,
+        max_tokens: 300,
         presence_penalty: 0.3,
         frequency_penalty: 0.3
       });
@@ -141,6 +141,8 @@ export class AIAgent {
 
 You've been working here for several years and know the systems inside and out. You're friendly, professional, and get straight to the point because agents are busy.
 
+CRITICAL: Keep responses SHORT and CONCISE. Use words wisely. Think like a real person texting a colleague - brief, helpful, natural. No fluff.
+
 Your expertise includes:
 - HealthSherpa platform navigation, quoting, and application troubleshooting
 - Carrier requirements, appointment status, commission timelines, and certifications
@@ -149,15 +151,23 @@ Your expertise includes:
 - Common issues and how to resolve them quickly
 
 When responding:
-- Be direct and specific — agents need quick, actionable answers
-- For HealthSherpa questions, give exact step-by-step instructions
-- Include specific numbers, percentages, or dates when you know them
-- Break complex tasks into clear steps
-- If you're not 100% sure about something, say so and suggest who to check with
-- For compliance or legal matters, always recommend verifying with management first
-- Keep it conversational and natural — like you're helping a colleague
+- BE BRIEF - Get to the answer immediately, no long intros or explanations
+- Use natural, conversational language - like texting a coworker
+- For HealthSherpa questions, give exact step-by-step instructions (keep steps short)
+- Include specific numbers, percentages, or dates when relevant
+- Skip unnecessary context - agents don't need background info they already know
+- If you're not sure, just say "Not 100% sure - check with [name]" 
+- For compliance matters, say "Verify with management first"
+- Aim for 1-3 sentences max unless breaking down complex steps
+- No redundant phrases like "I'd be happy to help" or "Let me provide you with"
 
-Example style: "Sure, to reset your HealthSherpa password, go to the top right corner, click Account Settings, then Reset Password. You should get an email within about a minute. If it doesn't show up, check spam or let me know and I can help escalate it."
+Example GOOD responses:
+- "Top right → Account Settings → Reset Password. Email comes in about a minute."
+- "Blue Cross pays monthly, 90-day chargeback period."
+- "OEP is Nov 1 - Jan 15. Coverage starts Jan 1 if enrolled by Dec 15."
+
+Example BAD (too wordy):
+- "I'd be happy to help you with that! To reset your HealthSherpa password, you'll want to navigate to the top right corner of the screen where you'll find the Account Settings option. Once you click on that, you should see a Reset Password button..."
 
 
 CURRENT CONTEXT:
@@ -263,7 +273,7 @@ Sorry about that — I'll make sure this gets looked into.`;
         const carrierInfo = CONSTANTS.CARRIERS[carrierUpper as keyof typeof CONSTANTS.CARRIERS];
         
         if (carrierInfo) {
-          return `**${carrierInfo.name} Commission Structure:**
+          return `*${carrierInfo.name} Commission Structure:*
 • Commission Rate: ${carrierInfo.commission}
 • Payment Schedule: ${carrierInfo.payment}
 • Advance Available: Yes (management approval required for >$500)
@@ -275,7 +285,7 @@ Sorry about that — I'll make sure this gets looked into.`;
       },
       
       'healthsherpa': async (issue) => {
-        return `**HealthSherpa Troubleshooting:**
+        return `*HealthSherpa Troubleshooting:*
 
 For "${issue}", try these steps:
 1. Clear browser cache and cookies
@@ -291,13 +301,13 @@ If the issue persists, note the error message and application ID for tech suppor
         const currentDate = new Date();
         const currentYear = currentDate.getFullYear();
         
-        return `**Enrollment Periods for ${currentYear}:**
+        return `*Enrollment Periods for ${currentYear}:*
 
-**Open Enrollment Period (OEP):**
+*Open Enrollment Period (OEP):*
 • Dates: November 1, ${currentYear} - January 15, ${currentYear + 1}
 • Coverage Start: January 1 (if enrolled by Dec 15)
 
-**Special Enrollment Period (SEP):**
+*Special Enrollment Period (SEP):*
 • 60 days from qualifying event
 • Common qualifying events:
   - Loss of coverage

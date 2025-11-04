@@ -295,7 +295,7 @@ export class SlackBot {
       
       await respond({
         response_type: 'ephemeral',
-        text: `**System Status (Last 7 Days)**
+        text: `*System Status (Last 7 Days)*
 • Active Users: ${metrics.unique_users}
 • Total Conversations: ${metrics.total_conversations}
 • Messages Processed: ${metrics.total_messages}
@@ -420,15 +420,24 @@ export class SlackBot {
   }
 
   private formatResponseBlocks(response: string, confidence: number): (Block | KnownBlock)[] {
+    // Convert GitHub markdown (**text**) to Slack markdown (*text*)
+    const slackFormatted = this.convertMarkdownToSlack(response);
+    
     return [
       {
         type: 'section',
         text: {
           type: 'mrkdwn',
-          text: response
+          text: slackFormatted
         }
       }
     ];
+  }
+
+  private convertMarkdownToSlack(text: string): string {
+    // Convert **text** to *text* for Slack formatting
+    // Use regex to match **text** but avoid converting if it's already ** followed by space or empty
+    return text.replace(/\*\*([^*]+?)\*\*/g, '*$1*');
   }
 
   private async addFeedbackButtons(
