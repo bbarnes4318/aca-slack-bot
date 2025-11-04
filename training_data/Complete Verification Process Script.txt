@@ -1,0 +1,55 @@
+# Complete Verification Process Script
+
+## Purpose
+**This protects:**
+- Your license
+- The agency
+- Creates legally binding verbal signature
+- Prevents false complaints
+- Required on EVERY call
+
+## Complete Verification Script
+
+"Now, before we continue, as I stated in the beginning, this call is being recorded. 
+My name is [YOUR NAME] with [AGENCY]. 
+Today's date is [DATE]. 
+
+Please state your full name and date of birth for consent to enroll in the marketplace.
+[Wait for response]
+
+I'm going to read some disclosures. Please wait to respond until I ask for each of the terms:
+
+You have selected the [CARRIER NAME] [PLAN TYPE] Plan. 
+Your monthly premium after the subsidy is $[AMOUNT]. 
+Your estimated income is $[AMOUNT], 
+and the effective date for this plan is January 1st, 2026.
+
+Do you hereby provide your verbal consent and authorize [AGENCY] to enroll you in the [CARRIER] plan provided through the marketplace? 
+Do you agree?
+[Wait for YES]
+
+You authorize [AGENCY] to update your health plan and make necessary changes for one year to keep the policy active, request required documentation/extensions, and notify you via call, text or email. 
+Do you agree?
+[Wait for YES]
+
+You authorize us to auto-renew your policy for plan year 2027 to ensure no lapse in coverage. 
+Do you agree?
+[Wait for YES]
+
+Now, do you understand that your [CARRIER] policy is separate from any other products you may have discussed or may be purchasing today? 
+If you understand and wish to proceed, please confirm by saying yes.
+[Wait for YES]
+
+This constitutes your electronic agreement and signature on your application."
+
+## Important Updates
+⚠️ **Year Corrections:** Update all references to correct tax years
+- 2026 for current enrollment year
+- 2027 for auto-renewal year
+- **Agency Name:** Update from "InsureACA" to current agency name as needed
+
+## Key Points
+- **Confidence is everything**
+- Read verification, get the yes, keep it pushing
+- This is legally binding
+- No shortcuts allowed

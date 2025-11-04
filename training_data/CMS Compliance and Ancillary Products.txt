@@ -1,0 +1,42 @@
+# Health Insurance Marketplace Enrollment Training
+
+## Module 3: CMS Compliance and Ancillary Products
+
+### Understanding CMS Compliance
+
+#### What is CMS?
+- **CMS = Centers for Medicare & Medicaid Services**
+- They are the "police" of ACA and Medicare
+- Function as regulatory enforcement for healthcare enrollment
+
+#### CMS Monitoring Activities
+- Secret shoppers ("trappers") make undercover calls
+- Test agents on script compliance and proper procedures
+- May complete entire enrollment to test process
+- **This year expectation:** Increased monitoring and undercover calls
+
+#### Compliance Requirements
+**Key Principles:**
+- Don't cut corners - more shortcuts = more liability
+- Don't mislead customers
+- Don't steer customers to certain plans for financial benefit
+- Always do what's best for the customer
+- You can make money doing it the right way
+
+### Critical Illness Insurance (Ancillary Product)
+
+#### What It Covers
+- Cancer diagnosis
+- Heart attack
+- Stroke
+- Life insurance component (death benefit to beneficiary)
+- **Benefit:** Lump sum payment upon qualifying event
+
+#### When to Offer Critical Illness
+**Perfect for:**
+- High deductible plans
+- Bronze plans with $0 premium
+- Customers concerned about catastrophic medical bills
+
+#### Sales Script Example
+"I know this plan has a high deductible, but I have something that pairs perfectly with it - critical illness coverage. It's only $40-50 per month. God forbid you had cancer, heart attack, or stroke, you'd receive a lump sum payment of $[AMOUNT]. You can use that to pay your entire deductible and have money left over for bills if you can't work."

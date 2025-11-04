@@ -1,0 +1,35 @@
+# Health Insurance Marketplace Enrollment Training
+## Module 5: Carrier Information
+
+### Approved Carriers
+
+#### ✅ Writing:
+- Ambetter
+- Blue Cross Blue Shield
+- United Healthcare
+- Medica
+- Other top carriers
+
+#### ❌ NEVER Write:
+- **Golden Rule** - "Avoid like the plague"
+- **Reason:** Golden Rule does not pay commissions
+
+### NPN Override Information
+
+#### Carriers Allowing NPN Overrides:
+Most carriers **EXCEPT:**
+- Ambetter
+- United Healthcare
+
+#### States NOT Allowing NPN Overrides:
+- Florida
+- Michigan
+- Others (limited list)
+
+**Note:** Majority of states allow NPN overrides
+
+### Important Points:
+- Cannot enroll Ambetter/United without direct appointment with agency
+- Can still sell if licensed in state, just no NPN override
+- No deadline for carrier appointments - still being processed during open enrollment
+- Appointments and routing still being set up

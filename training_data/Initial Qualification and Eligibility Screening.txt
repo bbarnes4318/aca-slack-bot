@@ -1,0 +1,42 @@
+# Initial Qualification and Eligibility Screening
+
+## Required Information Gathering
+1. "Are you looking for individual or family plans today?"
+2. "In case we get disconnected, what is the best number to reach you?"
+3. "Do you have Medicaid, Medicare, VA, Tri-Care, or any other health coverage outside of the marketplace?"
+
+## Disqualification Criteria
+### Cannot enroll if customer has:
+- Active Medicaid
+- Active Medicare
+- VA benefits
+- Tri-Care
+
+### Exception
+If customer received letter stating Medicaid is about to expire, enrollment is permitted
+
+### Can enroll if customer has:
+- Employer group coverage (during open enrollment period)
+- Must verify they are in their employer's open enrollment period
+
+## Consent Requirements
+### MUST obtain clear "YES" for consent
+- If customer says "yeah," "sure," or "okay" - politely ask: "Is that a yes?"
+- This is critical for compliance
+
+## Verification Script
+"Am I speaking with [CUSTOMER NAME]? You want to confirm that's [SPELL NAME]? What is your zip code? Do I have your consent to check the marketplace to verify your information and options? [WAIT FOR YES] Your health information is only for determining your enrollment eligibility and will not be shared with third parties."
+
+## Green Card & Immigration Status
+### Eligibility Requirements
+✅ **Can enroll if they have:**
+- Social Security Number
+- Green card
+- Valid immigration status
+
+### Documentation Process
+If eligibility results show documentation needed:
+1. Request immediately on the call
+2. "I need you to take a photo of your green card and send it to me right now"
+3. Get the appropriate number (A-number, I-94, etc.)
+4. Take screenshot/photo while on call

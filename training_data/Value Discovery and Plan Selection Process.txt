@@ -1,0 +1,59 @@
+# Value Discovery and Plan Selection Process
+
+## Establishing Value
+### Purpose
+Shows you care about customer needs, increases likelihood of enrollment completion and retention
+
+### Value Discovery Script
+"What are you looking for in a health insurance plan?"
+
+### Follow-up Probing Questions:
+- "Are there any medications that you must have covered?"
+- "Do you feel pain anywhere?"
+- "Is there anything specific you need your insurance for?"
+- "Are you just looking for regular doctor visits?"
+
+**Don't accept:** "Nothing really, I just want coverage" - PROBE DEEPER
+
+### Transition to Plan Search
+"Thank you for the information. One moment while I search the marketplace for you."
+
+## Notification of Subsidy
+### Subsidy Approval Script
+"Great news! You've been approved for a federal subsidy of $[AMOUNT], which will be applied directly to your policy premium today."
+
+### Best Practice
+- Take screenshot of plan
+- Send as text message to customer
+- Say: "Have you received the text of the policy on your phone? Let's review it together."
+
+## Plan Comparison Metrics
+### When comparing plans, evaluate:
+- Primary care copay vs. Specialist copay
+- Deductible amount vs. Maximum out-of-pocket
+- Emergency room coverage structure
+- Outpatient procedure costs
+
+### Plan Comparison Example:
+**Plan A:** $0 premium, $2,000 ER copay, Higher visit costs
+**Plan B:** Small premium, $0 ER after deductible, Lower visit costs
+
+## Customer Steering Guidance
+"If customer rarely goes to hospital but needs regular doctor visits:
+→ Choose plan with lower copays despite higher premium
+
+If customer concerned about catastrophic coverage:
+→ Choose plan with better hospital/ER coverage"
+
+## Brand Recognition Factor
+### Easy to sell (high brand recognition):
+✅ Blue Cross Blue Shield
+✅ United Healthcare  
+✅ Molina
+✅ Oscar
+
+### Harder to sell (low brand recognition):
+❌ Meridian
+❌ Other regional carriers
+
+**Note:** "It's really hard to compete against Blue Cross Blue Shield"

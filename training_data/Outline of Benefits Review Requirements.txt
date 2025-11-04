@@ -1,0 +1,52 @@
+# Outline of Benefits Review Requirements
+
+## Required Components (CMS Mandate)
+**You MUST mention ALL of the following:**
+1. Coinsurance percentage
+2. Deductible amount
+3. Maximum out-of-pocket amount
+
+## Benefits Review Script
+"I found a great plan with [CARRIER NAME]. This plan includes all of your preventive care such as:
+- Your annual checkup
+- Colonoscopy
+- Your blood work and lab work
+- All your regular checkup visits
+...which are fully covered at 100%.
+
+Now, if you need to see the doctor during the year for anything else:
+- Your primary doctor copay is just $[AMOUNT]
+- Your specialist copay is only $[AMOUNT]
+- Your deductible is $[AMOUNT]
+- Your coinsurance is [PERCENTAGE]%
+- Your maximum out-of-pocket is $[AMOUNT]"
+
+## Compliance Alert
+⚠️ **CMS VIOLATION WARNING:** Failure to mention coinsurance, deductible, and maximum out-of-pocket can result in:
+- Agent violations
+- License actions
+- Compliance infractions
+
+## Plan Selection Best Practices
+### Always check:
+1. Primary care copay
+2. Specialist copay
+3. Drug coverage (90% of drugs are generic = $3 copay)
+4. Blood work costs (many people get twice yearly)
+5. Urgent care copay
+6. Emergency room costs
+
+## Understanding "Full Price"
+"Full price" = Customer pays entire amount until deductible is met
+**Example:** $3,500 deductible = First $3,500 of ER bill is customer's responsibility
+
+## Doctor & Prescription Search
+### Left sidebar features:
+1. **Doctor search:**
+   - Type doctor's name
+   - Check box to filter plans
+   - Shows only in-network plans
+
+2. **Prescription search:**
+   - Enter medications
+   - Filter by coverage

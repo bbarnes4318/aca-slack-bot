@@ -1,0 +1,27 @@
+Training File 18: Document Collection Timeline and Follow-Up
+
+# Health Insurance Marketplace Enrollment Training
+## Module 6: Critical Compliance Timeline
+
+### Document Collection Window
+- **OLD SYSTEM:** 90 days to collect documents
+- **NEW SYSTEM:** 30 days only
+
+#### Impact:
+- Policies effective January 1st
+- No documents = No coverage = No commission
+- Could result in chargeback if advanced
+
+### Next-Day Follow-Up Template
+
+#### Text Message:
+"This is [Agent Name], your health insurance agent. Your coverage for you and your family will be CANCELED if you don't send required documents. You could be charged in full for any medical services. Please send [specific documents] immediately."
+
+### Payment Processing
+
+#### Healthcare.gov Payment Portal
+**If premium due:**
+1. Click "Set up payment" button in application
+2. Process payment immediately
+3. Ensures activation on effective date
+4. Collect Visa or Mastercard information

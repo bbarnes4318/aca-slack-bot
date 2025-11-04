@@ -68,6 +68,22 @@ async function parseTrainingFile(filePath: string): Promise<TrainingDocument> {
 async function ingestTrainingData() {
   console.log('🚀 Starting training data ingestion...');
   
+  // Test database connection first
+  try {
+    const client = await pool.connect();
+    await client.query('SELECT NOW()');
+    client.release();
+    console.log('✅ Database connection successful');
+  } catch (error: any) {
+    console.error('❌ Database connection failed:', error.message);
+    console.error('\n⚠️  Cannot connect to database. Please check:');
+    console.error('   1. Database server is running and accessible');
+    console.error('   2. VPN/firewall allows connection (if using remote DB)');
+    console.error('   3. Database credentials in .env are correct');
+    console.error('   4. For local dev, ensure DATABASE_URL is not set or use local DB settings\n');
+    process.exit(1);
+  }
+  
   // Initialize embeddings
   const embeddings = new OpenAIEmbeddings({
     openAIApiKey: process.env.OPENAI_API_KEY!,

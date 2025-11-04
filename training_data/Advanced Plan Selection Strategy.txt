@@ -1,0 +1,42 @@
+# Health Insurance Marketplace Enrollment Training
+## Module 6: Advanced Plan Selection Strategy
+
+### Plan Comparison Metrics
+
+**When comparing plans, evaluate:**
+- Primary care copay vs. Specialist copay
+- Deductible amount vs. Maximum out-of-pocket
+- Emergency room coverage structure
+- Outpatient procedure costs
+
+### Example Comparison:
+**Plan A:** $0 premium, $2,000 ER copay, Higher visit costs
+**Plan B:** Small premium, $0 ER after deductible, Lower visit costs
+
+### Customer Steering Guidance
+"If customer rarely goes to hospital but needs regular doctor visits: → Choose plan with lower copays despite higher premium
+If customer concerned about catastrophic coverage: → Choose plan with better hospital/ER coverage"
+
+### Brand Recognition Factor
+
+#### Easy to Sell (High Brand Recognition):
+✅ Blue Cross Blue Shield
+✅ United Healthcare
+✅ Molina
+✅ Oscar
+
+#### Harder to Sell (Low Brand Recognition):
+❌ Meridian
+❌ Other regional carriers
+
+**Note:** "It's really hard to compete against Blue Cross Blue Shield"
+Training File 14: Carrier Switching and Application Process
+
+
+
+
+
+
+
+
+

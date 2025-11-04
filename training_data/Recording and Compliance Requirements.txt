@@ -1,0 +1,75 @@
+Training File 1: Recording and Compliance Requirements
+
+# Health Insurance Marketplace Enrollment Training
+## Module 1: Recording and Compliance Requirements
+
+### Mandatory Recording Disclosure
+- **ALWAYS** state at the beginning of every call: "We are on a recorded line"
+- This is a legal requirement for telemarketing
+- Never skip this disclosure
+
+### Standard Opening Script
+"Hello, this is [AGENT NAME] with InsureACA. I'm a registered agent with the marketplace. We are on a recorded line. My job is to help you understand your health options and see if you qualify for government subsidies which help save on your health insurance."
+
+### Initial Qualification Questions
+**Required Information Gathering:**
+- "Are you looking for individual or family plans today?"
+- "In case we get disconnected, what is the best number to reach you?"
+- "Do you have Medicaid, Medicare, VA, Tri-Care, or any other health coverage outside of the marketplace?"
+
+### Disqualification Criteria
+**Cannot enroll if customer has:**
+- Active Medicaid
+- Active Medicare
+- VA benefits
+- Tri-Care
+
+**Exception:** If customer received letter stating Medicaid is about to expire, enrollment is permitted
+
+**Can enroll if customer has:**
+- Employer group coverage (during open enrollment period)
+- Must verify they are in their employer's open enrollment period
+
+### Consent Requirements
+- MUST obtain clear "YES" for consent
+- If customer says "yeah," "sure," or "okay" - politely ask: "Is that a yes?"
+- This is critical for compliance
+
+### Verification Script
+"Am I speaking with [CUSTOMER NAME]? You want to confirm that's [SPELL NAME]? What is your zip code? Do I have your consent to check the marketplace to verify your information and options? [WAIT FOR YES] Your health information is only for determining your enrollment eligibility and will not be shared with third parties."
+
+# Recording and Compliance Requirements Training
+
+## Mandatory Recording Disclosure
+- **ALWAYS** state at the beginning of every call: "We are on a recorded line"
+- This is a legal requirement for telemarketing
+- Never skip this disclosure
+
+## Standard Opening Script
+"Hello, this is [AGENT NAME] with InsureACA. I'm a registered agent with the marketplace. We are on a recorded line. My job is to help you understand your health options and see if you qualify for government subsidies which help save on your health insurance."
+
+## CMS Compliance Overview
+### What is CMS?
+- **CMS = Centers for Medicare & Medicaid Services**
+- They are the "police" of ACA and Medicare
+- Function as regulatory enforcement for healthcare enrollment
+
+### CMS Monitoring Activities
+- Secret shoppers ("trappers") make undercover calls
+- Test agents on script compliance and proper procedures
+- May complete entire enrollment to test process
+- **This year expectation:** Increased monitoring and undercover calls
+
+### Compliance Requirements
+**Key Principles:**
+1. Don't cut corners - more shortcuts = more liability
+2. Don't mislead customers
+3. Don't steer customers to certain plans for financial benefit
+4. Always do what's best for the customer
+5. You can make money doing it the right way
+
+## Critical Compliance Points
+- Document everything on recorded line for license protection
+- Get clear verbal consent before proceeding
+- Complete verification on EVERY call
+- No exceptions to compliance requirements

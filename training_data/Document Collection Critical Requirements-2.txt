@@ -1,0 +1,85 @@
+# Document Collection Critical Requirements
+
+## Timeline Changes
+- **OLD:** 90 days to collect documents
+- **NEW:** Only 30 days to collect documents
+- Policies go into effect January 1st
+- **No documents = No coverage = No commission**
+
+## Best Practices for Document Collection
+
+### During the Call:
+"Your application is missing some requested documents from the government. 
+Without this, your policy is at risk of losing your subsidy. 
+I need you to send this to me right now while we're on the phone."
+
+### Effective Techniques:
+1. **For Written Statements:**
+   - "Can you grab a piece of paper and pen right now?"
+   - "Write this statement: [dictate statement]"
+   - "Take a photo and text/email it to me now"
+
+2. **For Photo IDs/Documents:**
+   - "Take a photo with your phone"
+   - "Text it to me at [number]"
+   - "I just texted you - save my contact as [Name], Health Insurance Agent"
+
+3. **Success Rate:** 80% compliance when requested during call
+
+## Follow-up Strategy (If Documents Not Obtained Initially)
+### Next Day Text Message:
+"This is [Agent Name], your health insurance agent. 
+Your coverage for you and your family will be CANCELED if you don't send the required documents. 
+You could be charged in full for any medical services. 
+Please send [specific documents] immediately to avoid cancellation."
+
+## Eligibility Letter Review
+### Red Flags to Watch For
+If eligibility letter shows:
+- Medicaid requested docs
+- Medicare requested docs
+- VA requested docs
+
+### This typically means:
+1. Income is below threshold
+2. They already have government coverage
+3. Their SSN is linked to previous application
+
+### What to Do:
+"You need to provide me with a letter showing you are losing your [Medicaid/Medicare].
+Without this termination letter, we cannot proceed with enrollment."
+
+## Document Requirements
+⚠️ **No Commission Without Documents**
+- Documents must be obtained for coverage to begin
+- No documents = No coverage = No pay
+- Could result in chargeback if advanced
+
+## Why Speed Matters
+1. 30-day window only (down from 90 days)
+2. January 1st effective date approaching
+3. Customer phone numbers may change (government phones)
+4. Callback success rate: "Less than zero"
+
+## Best Time to Get Documents
+**"The best time to get a document from a customer is while you have them on the phone"**
+
+## Document Frequency
+- Approximately **1-2 out of 10** clients require documents
+- Usually triggered by:
+  - Previous Medicaid application
+  - Similar name to existing application
+  - Income verification needs
+  - Non-citizen status
+
+## Working with Government Phone Customers
+### Common Issues
+- Government-assisted cell phones (90-day service)
+- Using family/friend's phone for application
+- Difficult to reach after call ends
+
+### Solutions
+1. Get all documents during initial call
+2. Save your number in their contacts immediately
+3. Get alternative contact numbers
+4. Send reminder texts same day

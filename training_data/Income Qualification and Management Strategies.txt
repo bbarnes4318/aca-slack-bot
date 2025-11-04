@@ -1,0 +1,64 @@
+# Income Qualification and Management Strategies
+
+## Income Thresholds
+### Minimum Requirements:
+- **Individual:** $16,000 per year
+- **Couple:** $22,000 per year
+- *Note: Amounts vary by state*
+
+## Federal Poverty Level (FPL) Verification
+- **Primary Tool:** Healthcare.gov live link for state-specific minimums
+- **Why use live link:** Provides most updated numbers directly from healthcare.gov
+- **Alternative:** FPL chart for quick reference
+
+### How to Use Healthcare.gov Tool
+1. Navigate to healthcare.gov state-specific page
+2. Select the state
+3. Select household size
+4. View minimum income requirements
+
+## Handling Below-Threshold Income
+### Critical Principle
+**"We are NOT in the business of telling people they qualify for Medicaid and have a good day. We probe, we educate, and we ENROLL."**
+
+## Income Probing Script
+When customer provides income below threshold:
+
+"In your state, the household income minimum requirement is $16,000 per individual / $22,000 for a couple per year to qualify. Based on what you told me, your current income is lower than that. 
+
+Is there any additional income or other sources of income you expect this year that we haven't included, such as:
+- Tips
+- Bonuses
+- Overtime pay
+- Raises
+- Side jobs/side hustle
+- Any other work-related income
+
+We want to make sure your estimate is as accurate as possible for approval."
+
+## Additional Probing Techniques
+- "Do you plan on making more money this year?"
+- "Is it possible you could reach the minimum requirement?"
+- Be creative: "Do you bake cookies? Do anything from home?"
+- **Remember:** There's no penalty for estimating higher income, only for underestimating
+
+## Key Education Point
+"The enrollment is based on FUTURE income for 2025, not what you made last year."
+
+## Income Entry Best Practices
+### Preferred Method:
+- Use YEARLY income (not hourly/monthly)
+- "Quickest and easiest way"
+
+### Critical Distinction:
+"You could be self-employed making $300,000/year. All that matters is your NET income. Remember your adjusted gross income on your tax return? That's all they care about."
+
+## Handling Deductions
+**When asked about deductions:**
+**ALWAYS SELECT: NO**
+
+**Reasoning:**
+- "You're not an accountant"
+- Too complicated to itemize
+- Risk of errors
+- Use adjusted gross income ÷ 12 months

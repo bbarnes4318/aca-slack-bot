@@ -1,0 +1,70 @@
+# Health Insurance Marketplace Enrollment Training
+## Module 5: Post-Enrollment Process
+
+### Payment Processing
+
+#### Healthcare.gov Payment Portal
+**If premium due:**
+1. Click "Set up payment" button in application
+2. Process payment immediately
+3. Ensures activation on effective date
+4. Collect Visa or Mastercard information
+
+### Closing Questions Script
+"Do you have any questions on what we covered today? If any questions come up or you need assistance, you can always reach us at this number. Your health policy will take effect on January 1st. You should receive your insurance cards in about 7 to 14 business days."
+
+### Referral Collection Strategy
+
+#### Critical Principle
+"The backbone of my business is based on referrals"
+
+#### Effective Referral Request Script
+"John, the backbone of my business is based on referrals - whether it's a friend, relative, neighbor, or anyone. I want to help them the same way that I helped you. Who do you know that could also benefit from my services today? What's their name? What's their phone number?"
+
+#### Key Points About Referrals
+- Ask directly - Don't say "whenever you have someone, send them my way" - You'll never get it
+- Get it immediately - Ask for name and phone number right then
+- You get paid on referrals
+- Unlike Medicare - You CAN call referrals directly
+- This is ACA - "Remove all fear and take off all the pads and helmets"
+
+#### Medicare vs. ACA Comparison
+- **Medicare =** Full pads, helmet, rules, regulations (contact sport)
+- **ACA =** Flag football (much more relaxed)
+
+#### Advanced Referral Technique
+"Open your phone, go to your contacts, start at the A's. Let's go through and see who we can help."
+
+- Send text to customer
+- They can forward to their contacts
+
+### Privacy Statement & Flipping Prevention
+
+#### Required Privacy Warning
+"Please do not share any personal information. Unfortunately, some customers fall victim to this by providing their personal details, which can lead to their plan being switched or cancelled without their consent, sometimes even resulting in tax penalties. I don't want this to happen to you."
+
+#### Why This Matters
+- Protects customers from being flipped by other agents
+- Some customers have serious health issues:
+  - Medications they need covered
+  - Specialist visits required
+  - Cancer survivors
+- When policies switch without knowledge, it affects their care
+
+#### Build Relationship
+"Please save my contact information - [Your Phone Number]. You can text me or call me anytime. This is my direct number."
+
+### Agent Best Practices
+
+#### Relationship Building Benefits
+- Customers who trust you provide referrals
+- Family members become clients
+- Multiple households through one connection
+- Builds long-term business
+
+#### Key Mindset in ACA
+- You are the expert
+- Customers generally don't know insurance
+- Your job: Guide them to the right policy
+- Do right by them
+- We're the professionals, not them

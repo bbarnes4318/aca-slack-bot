@@ -1,0 +1,50 @@
+# Critical Illness Insurance and Closing the Sale
+
+## Critical Illness Insurance (Ancillary Product)
+### What It Covers
+- Cancer diagnosis
+- Heart attack
+- Stroke
+- Life insurance component (death benefit to beneficiary)
+- **Benefit:** Lump sum payment upon qualifying event
+
+### When to Offer Critical Illness
+**Perfect for:**
+- High deductible plans
+- Bronze plans with $0 premium
+- Customers concerned about catastrophic medical bills
+
+### Sales Script Example
+"I know this plan has a high deductible, but I have something that pairs perfectly with it - critical illness coverage. It's only $40-50 per month. God forbid you had cancer, heart attack, or stroke, you'd receive a lump sum payment of $[AMOUNT]. You can use that to pay your entire deductible and have money left over for bills if you can't work."
+
+## Closing the Sale
+### Initial Close Questions
+"Where would you like to have your insurance card mailed to?"
+
+**If premium is not $0:**
+"What method of payment would you like to use? Visa or Mastercard?"
+
+### Information Confirmation
+"Let me confirm the spelling of your first and last name as it appears on your tax returns..."
+"I have your date of birth as [DATE], is that correct?"
+"What's your email address?"
+"And you are a U.S. citizen, correct?"
+
+## Payment Processing
+### For Policies with Premium
+"What method of payment would you like to use? Visa or Mastercard?"
+
+### Payment Collection Process
+- If premium is due, collect during enrollment
+- Use healthcare.gov payment portal
+- Click "Set up payment" button
+- Process payment immediately for activation
+
+### Zero Premium Policies
+- Skip payment method question
+- Proceed directly to verification
+- Social Security Number becomes even more critical
+
+## Electronic Signature & Agreement
+### Statement After Verification
+"Thank you. This constitutes your electronic agreement and signature on your application."

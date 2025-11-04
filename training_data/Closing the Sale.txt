@@ -1,0 +1,57 @@
+# Health Insurance Marketplace Enrollment Training
+## Module 3: Closing the Sale
+
+### Initial Close Questions
+"Where would you like to have your insurance card mailed to?"
+
+**If premium is not $0:**
+"What method of payment would you like to use? Visa or Mastercard?"
+
+### Information Confirmation
+"Let me confirm the spelling of your first and last name as it appears on your tax returns..." "I have your date of birth as [DATE], is that correct?" "What's your email address?" "And you are a U.S. citizen, correct?"
+
+### Obtaining Social Security Numbers
+
+#### Critical Understanding
+- Cannot enroll without SSN - It's as critical as getting credit card information
+- SSN is how government identifies eligibility for subsidies
+- Required for subsidy qualification and payment
+
+#### Key Success Factors for Getting SSN
+
+**1. Confidence is Everything**
+- Sound confident and expectant
+- Treat it as order-taking, not requesting
+- Make it part of natural flow
+
+**2. Effective Approaches**
+
+**Option A - Natural Flow:**
+"Are you a U.S. citizen? Great. And your social, please?"
+
+**Option B - Verification Approach:**
+"Just to verify your social, please..."
+
+(Implies you already have it, just confirming)
+
+**Option C - Statement Not Question:**
+"And your social..."
+
+(Not "What is your social?" but stating expectation)
+
+**3. Building Foundation**
+- Good rapport earlier = easier SSN collection
+- If you've done your job building trust, this flows naturally
+
+#### Handling SSN Objections
+If customer objects:
+- Refer back to citizenship verification
+- Explain it's how we verify identity
+
+**Compare to other services:**
+"This is health insurance. Just like when you get auto insurance from Progressive or State Farm, or even open a Verizon account - the social is required for verification and subsidy approval."
+
+**Key Mindset:**
+- In the US, SSN is required for any legitimate business transaction
+- This is standard procedure, not special request
+- We're providing solutions, this is part of the process

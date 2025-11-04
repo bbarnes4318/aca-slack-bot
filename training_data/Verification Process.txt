@@ -1,0 +1,63 @@
+# Health Insurance Marketplace Enrollment Training
+## Module 3: Verification Process
+
+### Purpose
+This protects:
+- Your license
+- The agency
+- Creates legally binding verbal signature
+- Prevents false complaints
+- **Required on EVERY call**
+
+### Complete Verification Script
+"Now, before we continue, as I stated in the beginning, this call is being recorded. My name is [YOUR NAME] with [AGENCY]. Today's date is [DATE].
+Please state your full name and date of birth for consent to enroll in the marketplace. [Wait for response]
+I'm going to read some disclosures. Please wait to respond until I ask for each of the terms:
+You have selected the [CARRIER NAME] [PLAN TYPE] Plan. Your monthly premium after the subsidy is 
+[
+A
+M
+O
+U
+N
+T
+]
+.
+Y
+o
+u
+r
+e
+s
+t
+i
+m
+a
+t
+e
+d
+i
+n
+c
+o
+m
+e
+i
+s
+[AMOUNT].Yourestimatedincomeis
+[AMOUNT], and the effective date for this plan is [DATE].
+Do you hereby provide your verbal consent and authorize InsureACA to enroll you in the [CARRIER] plan provided through the marketplace? Do you agree? [Wait for YES]
+You authorize InsureACA to update your health plan and make necessary changes for one year to keep the policy active, request required documentation/extensions, and notify you via call, text or email. Do you agree? [Wait for YES]
+You authorize us to auto-renew your policy for the plan year 2027 to ensure no lapse in coverage. Do you agree? [Wait for YES]
+Now, do you understand that your [CARRIER] policy is separate from any other products you may have discussed or may be purchasing today? If you understand and wish to proceed, please confirm by saying yes. [Wait for YES]
+This constitutes your electronic agreement and signature on your application."
+
+### Best Practices
+✅ Make SSN request conversational and expected
+✅ Use ancillary products to overcome deductible objections
+✅ Complete full verification every time
+✅ Maintain confidence throughout close
+✅ Think of yourself as order-taker, not salesperson
+
+### Remember
+"The agents who get the most sales are the ones who sound the most confident when asking for the social. It's not a request - it's part of the process."

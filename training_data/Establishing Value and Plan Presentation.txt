@@ -1,0 +1,67 @@
+# Health Insurance Marketplace Enrollment Training
+## Module 2: Establishing Value and Plan Presentation
+
+### Establishing Value
+
+#### Purpose
+- Shows you care about customer needs
+- Increases likelihood of enrollment completion and retention
+
+#### Value Discovery Script
+"What are you looking for in a health insurance plan?"
+
+**Follow-up probing questions:**
+- "Are there any medications that you must have covered?"
+- "Do you feel pain anywhere?"
+- "Is there anything specific you need your insurance for?"
+- "Are you just looking for regular doctor visits?"
+
+**Don't accept:** "Nothing really, I just want coverage" - PROBE DEEPER
+
+#### Transition to Plan Search
+"Thank you for the information. One moment while I search the marketplace for you."
+
+### Notification of Subsidy
+
+#### Subsidy Approval Script
+"Great news! You've been approved for a federal subsidy of $[AMOUNT], which will be applied directly to your policy premium today."
+
+#### Best Practice
+- Take screenshot of plan
+- Send as text message to customer
+- Say: "Have you received the text of the policy on your phone? Let's review it together."
+
+### Outline of Benefits Review
+
+#### Required Components (CMS Mandate)
+You MUST mention ALL of the following:
+- Coinsurance percentage
+- Deductible amount
+- Maximum out-of-pocket amount
+
+#### Benefits Review Script
+"I found a great plan with [CARRIER NAME]. This plan includes all of your preventive care such as:
+Your annual checkup
+Colonoscopy
+Your blood work and lab work
+All your regular checkup visits ...which are fully covered at 100%.
+Now, if you need to see the doctor during the year for anything else:
+Your primary doctor copay is just $[AMOUNT]
+Your specialist copay is only $[AMOUNT]
+Your deductible is $[AMOUNT]
+Your coinsurance is [PERCENTAGE]%
+Your maximum out-of-pocket is $[AMOUNT]"
+
+### Compliance Alert
+⚠️ **CMS VIOLATION WARNING:** Failure to mention coinsurance, deductible, and maximum out-of-pocket can result in:
+- Agent violations
+- License actions
+- Compliance infractions
+
+### Common Mistakes to Avoid
+❌ Telling customers they don't qualify without probing
+❌ Skipping the value establishment questions
+❌ Not mentioning deductible/coinsurance/max out-of-pocket
+❌ Using outdated FPL numbers
+❌ Force-feeding plans without understanding needs
+❌ Not educating about future income vs. past income

@@ -1,0 +1,53 @@
+# Health Insurance Marketplace Enrollment Training
+## Module 6: Carrier Switching Restrictions
+
+### Non-Payment Situations
+⚠️ **CRITICAL:** Some carriers don't pay for switches
+
+#### Florida Blue Specific Rule:
+- If customer has Florida Blue in January
+- You enroll them in another plan with Florida Blue
+- **NO COMMISSION PAID**
+
+#### Carriers that Restricted Switches (2024):
+- Ambetter
+- United Healthcare
+- **(Note: Restrictions may be lifted for 2025 due to new fraud protections)**
+
+### Application Process in Serpa
+
+#### Starting Application
+1. Quote customer → Hit "Start Application"
+2. System automatically searches marketplace for existing applications
+3. **If found:** Use existing (pre-filled information)
+4. **If not found:** Start new application
+
+#### Using Existing Applications
+
+**Benefits of using existing app:**
+- All information carries over
+- Eliminates duplicate work
+- Faster enrollment process
+- Less chance for errors
+- Always check for prior year applications first
+Training File 15: SSN Collection Professional Approach
+# Health Insurance Marketplace Enrollment Training
+## Module 6: Social Security Number Collection
+
+### Professional Approach Script
+"What we're about to do is a government application with healthcare.gov. I'm fully certified with the government - you can look me up. My licenses are available on public information. This will require your full social to link your information with the IRS for your application."
+
+### Building Comfort Before SSN Request
+
+**Ask these questions FIRST:**
+1. What state are you in?
+2. Are you married?
+3. Are you working?
+4. How much are you making?
+5. Any dependents?
+
+**THEN ask for social** - feels more natural in flow
+
+### Security Assurance
+"Once I enter your social, it's encrypted. I won't be able to view it - even as your agent. The system only shows the last four digits. This is a government website with full protection under the Affordable Care Act."
+text

@@ -1,0 +1,50 @@
+Training File 17: Income Documentation Best Practices
+
+# Health Insurance Marketplace Enrollment Training
+## Module 6: Income Documentation
+
+### Income Entry Best Practices
+
+#### Preferred Method:
+- Use YEARLY income (not hourly/monthly)
+- Simplest and quickest approach
+- Reduces calculation errors
+
+#### Critical Distinction:
+"You could be self-employed making $300,000/year. All that matters is your NET income. Remember your adjusted gross income on your tax return? That's all they care about."
+
+### Deductions Handling
+
+**When asked about deductions:**
+**ALWAYS SELECT: NO**
+
+**Reasoning:**
+- You're not an accountant
+- Too complicated to itemize
+- Risk of errors
+- Use their adjusted gross income ÷ 12 months
+- They're giving you their average
+
+### Special Populations
+
+#### High-Income Scenarios
+**If income > $100,000 and kids on Medicaid/CHIP:**
+"When we enter $100,000/year, your kids will no longer qualify for Kid Care. We need to find a plan for everyone.
+
+**Opportunity:** More enrollments, better coverage
+"Kids on Medicaid are limited to certain doctors. Blue Cross Blue Shield network offers more options."
+
+#### Documentation Requirements by Population
+- **American Indian/Alaska Native:** Select NO (don't qualify for healthcare.gov)
+- **Incarcerated individuals:** Don't qualify for healthcare.gov
+- **Hispanic/Latino question:** Optional - can skip (select decline)
+
+### Application Settings
+
+#### Communication Preferences
+**Paper notices: ALWAYS select "Send by mail"**
+
+**Reason:**
+"Many people don't check email/texts, think it's spam, might miss critical coverage letters"
+
+Hard copy = "They can't say 'I never got it'"

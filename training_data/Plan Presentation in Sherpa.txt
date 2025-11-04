@@ -1,0 +1,66 @@
+# Health Insurance Marketplace Enrollment Training
+## Module 5: Plan Presentation in Sherpa
+
+### Main Dashboard Navigation
+1. Click "Quote on Exchange"
+2. Enter customer information:
+   - Zip code
+   - Household size
+   - Income
+   - Age
+
+### Building Quote
+
+**Example:**
+- Single household
+- Income: $20,000
+- Age: 47
+
+### Important Household Rules
+⚠️ **Critical:** Include ALL household members on taxes, even if not getting coverage
+
+**Customer:** "I just need coverage for myself"
+**Agent:** "Are you married? Do you claim any dependents?"
+**Customer:** "Yes"
+**Agent:** "We need to put everybody on the application"
+
+### Doctor & Prescription Search
+
+#### Left Sidebar Features:
+
+**Doctor search:**
+- Type doctor's name
+- Check box to filter plans
+- Shows only in-network plans
+
+**Prescription search:**
+- Enter medications
+- Filter by coverage
+
+### Plan Selection Best Practices
+
+**Always check:**
+- Primary care copay
+- Specialist copay
+- Drug coverage (90% of drugs are generic = $3 copay)
+- Blood work costs (many people get twice yearly)
+- Urgent care copay
+- Emergency room costs
+
+### Understanding "Full Price"
+"Full price" = Customer pays entire amount until deductible is met Example: $3,500 deductible = First $3,500 of ER bill is customer's responsibility
+
+### Plan Comparison Example
+
+**Plan A: United Zero Premium**
+- $0 premium
+- $0 deductible
+- But: $50 primary care, $120 specialist
+
+**Plan B: Alternative**
+- Small premium
+- Low deductible
+- $10 primary care, $30 specialist
+
+**Customer conversation:**
+"I don't really go to the hospital often, I just want low copays when I see the doctor" → Choose Plan B despite higher premium

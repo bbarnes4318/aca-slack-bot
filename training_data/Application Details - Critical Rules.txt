@@ -1,0 +1,31 @@
+Training File 16: Carrier Switching Restrictions
+# Health Insurance Marketplace Enrollment Training
+## Module 6: Application Details - Critical Rules
+
+### Tax Filing Requirements
+
+#### MUST File Jointly if Married:
+- **Question:** "Do you plan to file taxes for 2025?"
+- **Answer MUST be:** YES
+- **If married, MUST select:** Filing jointly
+- **If answer NO to either = DISQUALIFIED**
+
+#### Exception Explanation to Customer:
+"On healthcare.gov, you must file jointly with your spouse. However, at year-end, we're not accountants. Whatever your accountant decides is best, that's what you do. There's no penalty for not filing jointly, but you're expected to file jointly."
+
+### Household Members
+**Customer:** "I just need coverage for myself"
+**Agent:** "Are you married? Do you claim dependents?"
+**If YES:** "We need to put EVERYBODY on the application"
+
+**Rule:** Everyone on taxes = Everyone in household (Even if not all getting coverage)
+
+### Tobacco Use
+**ALWAYS SELECT: NO**
+
+**Reasons:**
+- Healthcare.gov has no restrictions
+- Can enroll with ANY condition (HIV, cancer, etc.)
+- Selecting YES increases premium
+- Could eliminate subsidy qualification
+- Creates payment collection requirement

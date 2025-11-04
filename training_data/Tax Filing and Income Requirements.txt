@@ -1,0 +1,37 @@
+# Health Insurance Marketplace Enrollment Training
+## Module 1: Tax Filing and Income Requirements
+
+### Tax Filing Requirements
+
+#### Education Script for Married Filing Separately
+"In order to qualify for the subsidy, if married, you must file jointly. Keep in mind, if you do not file jointly, you may be subject to tax penalties on your 2026 taxes. We recommend that you speak with a tax professional. So how would you like to proceed - as single or as married?"
+
+#### Tax Filing Verification Questions
+- "Did you file your taxes for 2024?"
+- **If no:** "Filing your taxes is a part of the requirement to qualify for the subsidy. You may still qualify, but you have to resolve your tax filing for at least 2024."
+
+#### Important Exception
+**If customer has never had marketplace coverage before:**
+- Proceed with enrollment regardless of tax filing status
+- They've never utilized subsidies before, so prior filing requirements don't apply
+
+### Income Qualification
+
+#### Income Thresholds
+**Minimum Requirements:**
+- Individual: $16,000 per year
+- Couple: $22,000 per year
+- Note: Amounts vary by state
+
+#### Income Verification Script
+"As best you can guess, what is your total household income for 2025?"
+
+#### If Income is Below Threshold
+"Based on what you told me, your current income is below the minimum requirement to qualify. Is there any additional income or other sources of income that you expect this year that we haven't included, such as tips, bonuses, overtime pay, raises, side hustle, or any other work-related income? We want to make sure your estimate is as accurate as possible for approval."
+
+### Key Compliance Points
+- Always educate, never advise - You are insurance professionals, not tax professionals
+- Document everything on recorded line for license protection
+- Get clear verbal consent before proceeding
+- Educate about potential tax penalties to prevent customer complaints
+- Verify all income sources for accurate subsidy calculations

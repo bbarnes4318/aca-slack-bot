@@ -1,0 +1,47 @@
+# Health Insurance Marketplace Enrollment Training
+## Module 2: Income Qualification Tools and Resources
+
+### Federal Poverty Level (FPL) Verification
+
+#### Primary Tool
+- Healthcare.gov live link for state-specific minimums
+- **Why use live link:** Provides most updated numbers directly from healthcare.gov
+- **Alternative:** FPL chart (Federal Poverty Level chart) for quick reference
+
+#### How to Use Healthcare.gov Tool
+1. Navigate to healthcare.gov state-specific page
+2. Select the state (e.g., Florida)
+3. Select household size
+4. View minimum income requirements:
+   - 1 person: $15,650 minimum
+   - 2 people: $21,150 minimum
+   - Numbers increase with household size
+
+### Handling Below-Threshold Income
+
+#### Critical Principle
+"We are NOT in the business of telling people they qualify for Medicaid and have a good day. We probe, we educate, and we ENROLL."
+
+#### Income Probing Script
+When customer provides income below threshold (e.g., $14,000 for individual):
+"In your state, the household income minimum requirement is $16,000 per individual / $22,000 for a couple per year to qualify. Based on what you told me, your current income is lower than that.
+Is there any additional income or other sources of income you expect this year that we haven't included, such as:
+Tips
+Bonuses
+Overtime pay
+Raises
+Side jobs/side hustle
+Any other work-related income
+We want to make sure your estimate is as accurate as possible for approval."
+
+#### Additional Probing Techniques
+- "Do you plan on making more money this year?"
+- "Is it possible you could reach the minimum requirement?"
+- Be creative: "Do you bake cookies? Do anything from home?"
+- **Remember:** There's no penalty for estimating higher income, only for underestimating
+
+#### Key Education Point
+"The enrollment is based on FUTURE income for 2025, not what you made last year."
+
+#### Last Resort Script (Only if absolutely no qualification possible)
+"It looks like you do not qualify based on the information you provided. You can contact your state Medicaid - they may be able to assist. If you apply for Medicaid and get a denial letter, we may be able to assist you. In the meantime, let's see if there are any other products you may be eligible for."
