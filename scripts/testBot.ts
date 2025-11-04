@@ -1,6 +1,6 @@
 import * as dotenv from 'dotenv';
 import { AIAgent } from '../src/ai/aiAgent';
-import { initDatabase, pool } from '../src/database/db';
+import { initDatabase, pool } from '../src/database/migrations/db';
 import { ConversationContext } from '../src/types';
 
 dotenv.config();

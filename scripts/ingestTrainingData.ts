@@ -1,7 +1,7 @@
 import { OpenAIEmbeddings } from '@langchain/openai';
 import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
 import { DatabaseQueries } from '../src/database/queries';
-import { pool } from '../src/database/db';
+import { pool } from '../src/database/migrations/db';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as dotenv from 'dotenv';
