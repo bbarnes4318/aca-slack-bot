@@ -1,0 +1,63 @@
+name: aca-slack-bot
+region: nyc
+services:
+  - name: bot
+    environment_slug: node-js
+    github:
+      repo: your-github-username/aca-slack-bot
+      branch: main
+      deploy_on_push: true
+    build_command: npm run build
+    run_command: node dist/index.js
+    http_port: 3000
+    instance_count: 1
+    instance_size_slug: basic-xs  # $5/month, upgrade if needed
+    health_check:
+      http_path: /health
+      initial_delay_seconds: 10
+      period_seconds: 30
+    envs:
+      # Slack Configuration
+      - key: SLACK_BOT_TOKEN
+        scope: RUN_TIME
+        type: SECRET
+      - key: SLACK_SIGNING_SECRET
+        scope: RUN_TIME
+        type: SECRET
+      - key: SLACK_APP_TOKEN
+        scope: RUN_TIME
+        type: SECRET
+      - key: SLACK_TEAM_ID
+        scope: RUN_TIME
+        value: "T1234567890"
+      - key: MANAGEMENT_CHANNEL_ID
+        scope: RUN_TIME
+        value: "C1234567890"
+      
+      # OpenAI Configuration
+      - key: OPENAI_API_KEY
+        scope: RUN_TIME
+        type: SECRET
+      
+      # Database Configuration (use DO database connection string)
+      - key: DATABASE_URL
+        scope: RUN_TIME
+        type: SECRET
+      
+      # App Configuration
+      - key: NODE_ENV
+        scope: RUN_AND_BUILD_TIME
+        value: "production"
+      - key: BOT_NAME
+        scope: RUN_TIME
+        value: "ACA Support System"
+      - key: ENABLE_CACHE
+        scope: RUN_TIME
+        value: "true"
+
+databases:
+  - name: aca-bot-db
+    engine: PG
+    version: "15"
+    size: db-s-1vcpu-1gb  # $15/month
+    num_nodes: 1
