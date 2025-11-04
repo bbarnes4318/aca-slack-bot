@@ -139,10 +139,10 @@ export class SlackBot {
           );
         }
 
-        // Add feedback buttons for learning
-        if (process.env.ENABLE_FEEDBACK_COLLECTION === 'true' && sentMessage.ts) {
-          await this.addFeedbackButtons(client, message.channel, sentMessage.ts, messageId);
-        }
+        // Feedback collection disabled to maintain human-like appearance
+        // if (process.env.ENABLE_FEEDBACK_COLLECTION === 'true' && sentMessage.ts) {
+        //   await this.addFeedbackButtons(client, message.channel, sentMessage.ts, messageId);
+        // }
 
       } catch (error: any) {
         const threadTs = 'thread_ts' in message ? message.thread_ts : undefined;
@@ -420,7 +420,7 @@ export class SlackBot {
   }
 
   private formatResponseBlocks(response: string, confidence: number): (Block | KnownBlock)[] {
-    const blocks: (Block | KnownBlock)[] = [
+    return [
       {
         type: 'section',
         text: {
@@ -429,21 +429,6 @@ export class SlackBot {
         }
       }
     ];
-
-    // Add confidence indicator if low
-    if (confidence < 0.7) {
-      blocks.push({
-        type: 'context',
-        elements: [
-          {
-            type: 'mrkdwn',
-            text: `_Confidence: ${(confidence * 100).toFixed(0)}%_`
-          }
-        ]
-      });
-    }
-
-    return blocks;
   }
 
   private async addFeedbackButtons(
@@ -564,7 +549,7 @@ export class SlackBot {
             type: 'section',
             text: {
               type: 'mrkdwn',
-              text: `*AI Response:*\n${Helpers.truncateString(aiResponse.response, 500)}`
+              text: `*Response:*\n${Helpers.truncateString(aiResponse.response, 500)}`
             }
           },
           {
@@ -606,15 +591,15 @@ export class SlackBot {
   }
 
   private getErrorResponse(): string {
-    return `I apologize, but I'm experiencing technical difficulties right now.
+    return `Sorry, I'm having trouble accessing that information right now. 
 
-**What you can do:**
-• Try rephrasing your question
-• Use one of our quick commands (/commission, /healthsherpa, /enrollment)
-• Contact your supervisor directly for urgent matters
-• Check the #support channel for similar issues
+Try:
+• Rephrasing your question
+• Using one of the quick commands (/commission, /healthsherpa, /enrollment)
+• Contacting your supervisor directly for urgent matters
+• Checking the #support channel for similar issues
 
-This error has been logged and our team will investigate.`;
+I'll let the team know about this.`;
   }
 
   async start(): Promise<void> {

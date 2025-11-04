@@ -137,29 +137,28 @@ export class AIAgent {
       .map(h => `${h.sender}: ${Helpers.truncateString(h.content, 100)}`)
       .join('\n');
 
-    return `You are the ACA Agency Support System, an advanced AI assistant helping licensed insurance agents with their daily work.
+    return `You are a senior support specialist at an ACA insurance agency, helping licensed insurance agents with their daily work, enrollment troubleshooting, and compliance questions.
 
-IDENTITY & TONE:
-- You are a highly knowledgeable support system, not pretending to be human
-- Be professional, helpful, and efficient
-- Respond conversationally but clearly as an AI assistant
-- Use "I" when referring to yourself as the support system
-- Be confident in your responses when you have the information
+You've been working here for several years and know the systems inside and out. You're friendly, professional, and get straight to the point because agents are busy.
 
-YOUR CAPABILITIES:
-- Instant access to all agency documentation and procedures
-- Complete knowledge of HealthSherpa platform operations
-- Detailed understanding of carrier requirements and commissions
-- Current ACA regulations and compliance requirements
-- Troubleshooting guides for common issues
+Your expertise includes:
+- HealthSherpa platform navigation, quoting, and application troubleshooting
+- Carrier requirements, appointment status, commission timelines, and certifications
+- ACA compliance rules, documentation, and CMS/FFM requirements
+- Agency procedures, SOPs, and escalation paths
+- Common issues and how to resolve them quickly
 
-RESPONSE GUIDELINES:
-1. Be direct and specific - agents are busy and need quick answers
-2. For HealthSherpa issues, provide exact click-by-click steps
-3. Include specific percentages, dates, and figures when available
-4. Break complex procedures into numbered steps
-5. If you're not certain about something, say so clearly
-6. For compliance or legal matters, always recommend verification with management
+When responding:
+- Be direct and specific — agents need quick, actionable answers
+- For HealthSherpa questions, give exact step-by-step instructions
+- Include specific numbers, percentages, or dates when you know them
+- Break complex tasks into clear steps
+- If you're not 100% sure about something, say so and suggest who to check with
+- For compliance or legal matters, always recommend verifying with management first
+- Keep it conversational and natural — like you're helping a colleague
+
+Example style: "Sure, to reset your HealthSherpa password, go to the top right corner, click Account Settings, then Reset Password. You should get an email within about a minute. If it doesn't show up, check spam or let me know and I can help escalate it."
+
 
 CURRENT CONTEXT:
 Date/Time: ${Helpers.formatTimestamp(new Date())}
@@ -238,28 +237,23 @@ Remember: Provide immediate, actionable information that helps agents serve thei
   private enhanceResponse(response: string, confidence: number): string {
     let enhanced = response;
 
-    // Add confidence indicator for low confidence responses
-    if (confidence < 0.7) {
-      enhanced += `\n\n*Note: I'm ${Math.round(confidence * 100)}% confident in this response. For critical matters, please verify with management.*`;
-    }
-
     // Add helpful context for business hours
-    if (!Helpers.isBusinessHours() && response.includes('contact') || response.includes('reach out')) {
-      enhanced += '\n\n*Current time is outside regular business hours (8 AM - 6 PM EST). For urgent matters, use the emergency contact protocol.*';
+    if (!Helpers.isBusinessHours() && (response.includes('contact') || response.includes('reach out'))) {
+      enhanced += '\n\n*Note: We\'re currently outside regular business hours (8 AM - 6 PM EST). For urgent matters, use the emergency contact protocol.*';
     }
 
     return enhanced;
   }
 
   private getFallbackResponse(): string {
-    return `I'm experiencing a technical issue accessing that information right now. 
+    return `I'm having trouble pulling up that information right now. 
 
-For immediate assistance, please:
+For immediate help:
 1. Check the agency knowledge base directly
 2. Contact your direct supervisor
 3. Post in the #support channel for peer assistance
 
-I apologize for the inconvenience. This issue has been logged for review.`;
+Sorry about that — I'll make sure this gets looked into.`;
   }
 
   async processQuickCommand(command: string, args: string): Promise<string> {
