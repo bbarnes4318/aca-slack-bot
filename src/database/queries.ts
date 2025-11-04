@@ -1,4 +1,4 @@
-import { pool } from './db';
+import { pool } from './migrations/db';
 import { v4 as uuidv4 } from 'uuid';
 import { logger } from '../utils/logger';
 
@@ -25,7 +25,7 @@ export class DatabaseQueries {
     
     // Update usage count for retrieved documents
     if (result.rows.length > 0) {
-      const ids = result.rows.map(r => r.id);
+      const ids = result.rows.map((r: any) => r.id);
       await pool.query(
         `UPDATE knowledge_base 
          SET usage_count = usage_count + 1, 

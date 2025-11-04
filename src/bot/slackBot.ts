@@ -48,6 +48,7 @@ export class SlackBot {
       // Type guard
       if (!('text' in message) || !('user' in message)) return;
       if (message.subtype === 'bot_message') return;
+      if (!message.text) return;
       
       const messageKey = `${message.channel}-${message.ts}`;
       
@@ -70,12 +71,15 @@ export class SlackBot {
           userInfo.user?.profile?.email
         );
 
+        // Get thread_ts if it exists
+        const threadTs = 'thread_ts' in message ? message.thread_ts : undefined;
+
         // Create conversation context
         const conversationId = await DatabaseQueries.getOrCreateConversation(
           message.user,
           userName,
           message.channel,
-          message.thread_ts
+          threadTs
         );
 
         const context: ConversationContext = {
@@ -83,7 +87,7 @@ export class SlackBot {
           userId: message.user,
           userName,
           channelId: message.channel,
-          threadTs: message.thread_ts,
+          threadTs: threadTs,
           history: []
         };
 
@@ -95,7 +99,7 @@ export class SlackBot {
         );
 
         // Show typing indicator
-        const typingMessage = await this.showTypingIndicator(client, message.channel, message.thread_ts || message.ts);
+        const typingMessage = await this.showTypingIndicator(client, message.channel, threadTs || message.ts);
 
         // Generate AI response
         const startTime = Date.now();
@@ -113,7 +117,7 @@ export class SlackBot {
         // Send response
         const sentMessage = await say({
           text: aiResponse.response,
-          thread_ts: message.thread_ts || message.ts,
+          thread_ts: threadTs || message.ts,
           blocks: this.formatResponseBlocks(aiResponse.response, aiResponse.confidence)
         });
 
@@ -136,21 +140,22 @@ export class SlackBot {
         }
 
         // Add feedback buttons for learning
-        if (process.env.ENABLE_FEEDBACK_COLLECTION === 'true') {
-          await this.addFeedbackButtons(client, message.channel, sentMessage.ts!, messageId);
+        if (process.env.ENABLE_FEEDBACK_COLLECTION === 'true' && sentMessage.ts) {
+          await this.addFeedbackButtons(client, message.channel, sentMessage.ts, messageId);
         }
 
       } catch (error: any) {
+        const threadTs = 'thread_ts' in message ? message.thread_ts : undefined;
         if (error?.remainingPoints !== undefined) {
           await say({
             text: "⚠️ You're sending messages too quickly. Please wait a moment before trying again.",
-            thread_ts: message.thread_ts || message.ts
+            thread_ts: threadTs || message.ts
           });
         } else {
           logger.error('Error handling message:', error);
           await say({
             text: this.getErrorResponse(),
-            thread_ts: message.thread_ts || message.ts
+            thread_ts: threadTs || message.ts
           });
         }
       } finally {
@@ -167,12 +172,14 @@ export class SlackBot {
         const userInfo = await client.users.info({ user: event.user });
         const userName = userInfo.user?.real_name || 'Agent';
         
+        const threadTs = 'thread_ts' in event ? event.thread_ts : undefined;
+        
         // Create context
         const conversationId = await DatabaseQueries.getOrCreateConversation(
           event.user,
           userName,
           event.channel,
-          event.thread_ts
+          threadTs
         );
 
         const context: ConversationContext = {
@@ -180,7 +187,7 @@ export class SlackBot {
           userId: event.user,
           userName,
           channelId: event.channel,
-          threadTs: event.thread_ts,
+          threadTs: threadTs,
           history: []
         };
 
@@ -189,15 +196,16 @@ export class SlackBot {
         
         await say({
           text: aiResponse.response,
-          thread_ts: event.thread_ts || event.ts,
+          thread_ts: threadTs || event.ts,
           blocks: this.formatResponseBlocks(aiResponse.response, aiResponse.confidence)
         });
         
       } catch (error) {
         logger.error('Error handling app mention:', error);
+        const threadTs = 'thread_ts' in event ? event.thread_ts : undefined;
         await say({
           text: this.getErrorResponse(),
-          thread_ts: event.thread_ts || event.ts
+          thread_ts: threadTs || event.ts
         });
       }
     });
@@ -295,7 +303,9 @@ export class SlackBot {
     this.app.action('feedback_helpful', async ({ action, ack, client, body }) => {
       await ack();
       
-      if (!('value' in action)) return;
+      if (!('value' in action) || !action.value) return;
+      if (!('message' in body) || !body.message) return;
+      if (!body.channel || !('id' in body.channel)) return;
       
       await DatabaseQueries.saveFeedback(
         action.value,
@@ -305,12 +315,13 @@ export class SlackBot {
         true
       );
 
+      const message = body.message as any;
       await client.chat.update({
-        channel: body.channel!.id,
-        ts: body.message!.ts,
-        text: body.message!.text || '',
+        channel: body.channel.id,
+        ts: message.ts,
+        text: message.text || '',
         blocks: [
-          ...((body.message as any).blocks || []).slice(0, -1),
+          ...(message.blocks || []).slice(0, -1),
           {
             type: 'section',
             text: {
@@ -325,7 +336,9 @@ export class SlackBot {
     this.app.action('feedback_not_helpful', async ({ action, ack, client, body }) => {
       await ack();
       
-      if (!('value' in action)) return;
+      if (!('value' in action) || !action.value) return;
+      if (!('message' in body) || !body.message) return;
+      if (!body.channel || !('id' in body.channel)) return;
       
       await DatabaseQueries.saveFeedback(
         action.value,
@@ -343,12 +356,13 @@ export class SlackBot {
         3
       );
 
+      const message = body.message as any;
       await client.chat.update({
-        channel: body.channel!.id,
-        ts: body.message!.ts,
-        text: body.message!.text || '',
+        channel: body.channel.id,
+        ts: message.ts,
+        text: message.text || '',
         blocks: [
-          ...((body.message as any).blocks || []).slice(0, -1),
+          ...(message.blocks || []).slice(0, -1),
           {
             type: 'section',
             text: {
@@ -446,7 +460,7 @@ export class SlackBot {
         await client.chat.update({
           channel,
           ts,
-          text: originalMessage.text,
+          text: originalMessage.text || '',
           blocks: [
             ...(originalMessage.blocks || []),
             {

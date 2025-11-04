@@ -1,8 +1,7 @@
 import * as dotenv from 'dotenv';
 import { SlackBot } from './bot/slackBot';
-import { initDatabase, testConnection } from './database/db';
+import { initDatabase, testConnection, pool } from './database/migrations/db';
 import { logger } from './utils/logger';
-import { pool } from './database/db';
 import express from 'express';
 
 const healthApp = express();

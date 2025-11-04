@@ -1,5 +1,5 @@
 import { Pool, Client, PoolConfig } from 'pg';
-import { logger } from '../utils/logger';
+import { logger } from '../../utils/logger';
 
 // SMART CONFIG: Checks for DATABASE_URL first (App Platform), 
 // falls back to individual vars (local development)

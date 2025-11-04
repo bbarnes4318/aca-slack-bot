@@ -266,7 +266,7 @@ I apologize for the inconvenience. This issue has been logged for review.`;
     const commands: Record<string, (args: string) => Promise<string>> = {
       'commission': async (carrier) => {
         const carrierUpper = carrier.toUpperCase();
-        const carrierInfo = CONSTANTS.CARRIERS[carrierUpper];
+        const carrierInfo = CONSTANTS.CARRIERS[carrierUpper as keyof typeof CONSTANTS.CARRIERS];
         
         if (carrierInfo) {
           return `**${carrierInfo.name} Commission Structure:**
