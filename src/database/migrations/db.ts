@@ -6,8 +6,16 @@ import { logger } from '../../utils/logger';
 function createPoolConfig(): PoolConfig {
   // App Platform provides DATABASE_URL
   if (process.env.DATABASE_URL) {
-    return {
-      connectionString: process.env.DATABASE_URL,
+    // Parse connection string to extract components
+    const dbUrl = new URL(process.env.DATABASE_URL);
+    
+    // Build config with explicit SSL settings
+    const config: PoolConfig = {
+      host: dbUrl.hostname,
+      port: parseInt(dbUrl.port || '5432'),
+      database: dbUrl.pathname.slice(1), // Remove leading /
+      user: dbUrl.username,
+      password: dbUrl.password,
       ssl: {
         rejectUnauthorized: false
       },
@@ -15,6 +23,8 @@ function createPoolConfig(): PoolConfig {
       idleTimeoutMillis: 30000,
       connectionTimeoutMillis: 10000
     };
+    
+    return config;
   }
   
   // Local development or Droplet deployment
