@@ -71,9 +71,24 @@ export async function testConnection(): Promise<boolean> {
 export async function initDatabase(): Promise<void> {
   const client = await pool.connect();
   try {
-    // Test vector extension
-    await client.query('SELECT vector_version()');
-    logger.info('pgvector extension is ready');
+    // Check and install vector extension if needed
+    try {
+      await client.query('SELECT vector_version()');
+      logger.info('pgvector extension is ready');
+    } catch (error: any) {
+      if (error.code === '42883') {
+        logger.info('pgvector extension not found - installing...');
+        try {
+          await client.query('CREATE EXTENSION IF NOT EXISTS vector');
+          logger.info('pgvector extension installed successfully');
+        } catch (installError: any) {
+          logger.error('Failed to install pgvector extension:', installError);
+          throw new Error('pgvector extension is required but could not be installed. Please install manually: CREATE EXTENSION vector;');
+        }
+      } else {
+        throw error;
+      }
+    }
     
     // Verify tables exist
     const tables = ['knowledge_base', 'conversations', 'messages', 'feedback'];
