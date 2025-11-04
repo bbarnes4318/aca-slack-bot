@@ -30,12 +30,17 @@ function createPoolConfig(): PoolConfig {
   }
   
   // Local development or Droplet deployment
+  const password = process.env.DB_PASSWORD;
+  if (!password) {
+    throw new Error('DB_PASSWORD environment variable is required for local database connection');
+  }
+  
   return {
-    host: process.env.DB_HOST,
+    host: process.env.DB_HOST || 'localhost',
     port: parseInt(process.env.DB_PORT || '5432'),
     database: process.env.DB_NAME,
     user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
+    password: String(password), // Ensure password is a string
     max: parseInt(process.env.DB_POOL_SIZE || '20'),
     idleTimeoutMillis: 30000,
     connectionTimeoutMillis: 10000,
