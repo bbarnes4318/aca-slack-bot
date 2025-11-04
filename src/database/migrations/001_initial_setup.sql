@@ -37,11 +37,7 @@ CREATE TABLE IF NOT EXISTS conversations (
     escalation_reason TEXT,
     created_at TIMESTAMP DEFAULT NOW(),
     updated_at TIMESTAMP DEFAULT NOW(),
-    resolved_at TIMESTAMP,
-    INDEX idx_user_id (slack_user_id),
-    INDEX idx_channel_id (slack_channel_id),
-    INDEX idx_status (status),
-    INDEX idx_created_at (created_at DESC)
+    resolved_at TIMESTAMP
 );
 
 -- Messages table
@@ -53,9 +49,7 @@ CREATE TABLE IF NOT EXISTS messages (
     confidence_score FLOAT,
     response_time_ms INTEGER,
     metadata JSONB DEFAULT '{}',
-    created_at TIMESTAMP DEFAULT NOW(),
-    INDEX idx_conversation_id (conversation_id),
-    INDEX idx_created_at (created_at DESC)
+    created_at TIMESTAMP DEFAULT NOW()
 );
 
 -- User feedback table
@@ -104,13 +98,17 @@ CREATE TABLE IF NOT EXISTS escalation_queue (
 );
 
 -- Create indexes for better performance
-CREATE INDEX idx_kb_embedding ON knowledge_base USING ivfflat (embedding vector_cosine_ops) WITH (lists = 100);
-CREATE INDEX idx_kb_category ON knowledge_base(category, subcategory);
-CREATE INDEX idx_kb_content_trgm ON knowledge_base USING gin (content gin_trgm_ops);
-CREATE INDEX idx_kb_metadata ON knowledge_base USING gin (metadata);
-CREATE INDEX idx_conversations_user_time ON conversations(slack_user_id, created_at DESC);
-CREATE INDEX idx_messages_conversation_time ON messages(conversation_id, created_at DESC);
-CREATE INDEX idx_feedback_user ON feedback(slack_user_id);
+CREATE INDEX IF NOT EXISTS idx_kb_embedding ON knowledge_base USING ivfflat (embedding vector_cosine_ops) WITH (lists = 100);
+CREATE INDEX IF NOT EXISTS idx_kb_category ON knowledge_base(category, subcategory);
+CREATE INDEX IF NOT EXISTS idx_kb_content_trgm ON knowledge_base USING gin (content gin_trgm_ops);
+CREATE INDEX IF NOT EXISTS idx_kb_metadata ON knowledge_base USING gin (metadata);
+CREATE INDEX IF NOT EXISTS idx_user_id ON conversations(slack_user_id);
+CREATE INDEX IF NOT EXISTS idx_channel_id ON conversations(slack_channel_id);
+CREATE INDEX IF NOT EXISTS idx_status ON conversations(status);
+CREATE INDEX IF NOT EXISTS idx_conversations_user_time ON conversations(slack_user_id, created_at DESC);
+CREATE INDEX IF NOT EXISTS idx_conversation_id ON messages(conversation_id);
+CREATE INDEX IF NOT EXISTS idx_messages_conversation_time ON messages(conversation_id, created_at DESC);
+CREATE INDEX IF NOT EXISTS idx_feedback_user ON feedback(slack_user_id);
 
 -- Create views for analytics
 CREATE OR REPLACE VIEW daily_metrics AS
