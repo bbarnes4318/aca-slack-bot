@@ -514,7 +514,7 @@ export class SlackBot {
       const managementChannel = process.env.MANAGEMENT_CHANNEL_ID;
       if (!managementChannel) return;
 
-      await this.app.client.chat.postMessage({
+      const escalationMessage = {
         token: process.env.SLACK_BOT_TOKEN!,
         channel: managementChannel,
         text: '🚨 Support Escalation Required',
@@ -586,7 +586,31 @@ export class SlackBot {
             ]
           }
         ]
-      });
+      };
+
+      try {
+        await this.app.client.chat.postMessage(escalationMessage);
+      } catch (postError: any) {
+        const errorCode = postError?.data?.error || postError?.code;
+        
+        // If not in channel, try to join then retry once
+        if (errorCode === 'not_in_channel') {
+          try {
+            await this.app.client.conversations.join({
+              token: process.env.SLACK_BOT_TOKEN!,
+              channel: managementChannel
+            });
+            // Retry posting after joining
+            await this.app.client.chat.postMessage(escalationMessage);
+          } catch (joinErr) {
+            logger.warn('Could not join or post escalation to management channel. Invite the app to the channel or add chat:write.public scope.', {
+              conversationId: context.conversationId
+            });
+          }
+        } else {
+          throw postError; // Re-throw if it's a different error
+        }
+      }
 
       logger.info('Escalation created', {
         conversationId: context.conversationId,
